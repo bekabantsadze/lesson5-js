@@ -32,7 +32,7 @@ let ulElement = document.querySelector('.ul-list');
 
 let newLiElement = document.createElement('li');
 newLiElement.textContent = 'javascript';
-// newLiElement.innerText = 'javascript';
+
 newLiElement.classList.add('li-item');
 
 let newLiElement2 = document.createElement('li');
