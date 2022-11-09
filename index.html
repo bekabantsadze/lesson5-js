@@ -10,23 +10,33 @@
 </head> 
 <body>
     <header>
-        <div id="menu">
-            <div id="menu-bar" onclick="menuOnClick()">
-              <div id="bar1" class="bar"></div>
-              <div id="bar2" class="bar"></div>
-              <div id="bar3" class="bar"></div>
-            </div>
-            <nav class="nav" id="nav">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </nav> 
-          </div>
-          
-          <div class="menu-bg" id="menu-bg"></div>
+      <div class="wrapper active-element">
+        <header class="main-header">
+            <nav>
+                <div class="masthead active-element">
+                    <h1><a href="#0">Lesson 5 </a></h1>
+                    <div id="menu-toggle" class="menu-toggle active-element">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="main-nav-list active-element">
+                    <ul>
+                        <li><a href="#0">Home</a></li>
+                        <li><a href="#0">Product</a></li>
+                        <li><a href="#0" class="mobile-hide">Blog</a></li>
+                        <li><a href="#0" class="active-link">About</a></li>
+                        <li><a href="#0">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
     </header>
+    <section class="form-section">
+      <input type="text" class="input-form" id="input-text" name="input">
+      <button class="add-button">add</button>
+      <ul class="ul-list"></ul>
+      <button class="clarlist">clear all</button>
+    </section>
 </body>
 </html>
