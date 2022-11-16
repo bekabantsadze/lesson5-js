@@ -7,36 +7,39 @@ var toggledMenu = menuToggle.addEventListener("click", function(){
      }
 })
 
-document.getElementById("clickBody")
-  .addEventListener("click", function (event) {
-    console.log(event);
-  });
+let inputWrapper=document.querySelector(".input-form");
+let addButton=document.querySelector(".add-button");
+let ul=document.querySelector(".ul-list");
+let clearList=document.querySelector(".clearList")
+let formElement=document.querySelector(".form-wrapper")
 
-document.getElementById("username").addEventListener("keydown", function (y) {
+formElement.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    let inputValue=inputWrapper.value;
+    if(inputValue==" "){
+        return;
+    }
+    
+    
+    let li=document.createElement("li");
+    li.textContent=inputValue;
+    ul.appendChild(li);
+    inputWrapper.value= " "
+    
+    let index=document.createElement("i");
+        index.classList.add();
+        index.addEventListener("click",()=>{
+            li.remove();
+        })
+        li.appendChild(index);
+        ul.appendChild(li);
 
-  y.target.classList.add("input-wraper");
-});
 
-document.getElementById("link").addEventListener("click", function (event) {
-  event.preventDefault();
-});
-
-
-let usernameField = document.getElementById("username");
-
-usernameField.addEventListener("input", function (event) {
-  event.target.value = event.target.value.toUpperCase();
-});
-
-let ulElement = document.querySelector('.ul-list');
-
-let newLiElement = document.createElement('li');
-newLiElement.textContent = 'javascript';
-
-newLiElement.classList.add('li-item');
-
-let newLiElement2 = document.createElement('li');
-newLiElement2.textContent = 'html';
-
-ulElement.appendChild(newLiElement);
-ulElement.appendChild(newLiElement2);
+        clearAllItems.addEventListener("click", function () {
+          ul.innerHTML = " ";
+        });
+        
+        function fun(){  
+          document.getElementById("formwraper").reset();  
+        }   
+})

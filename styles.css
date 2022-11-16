@@ -184,7 +184,7 @@ body{
 }
 
 
-/*** Just getting silly now ***************************/
+
 .wrapper.active p{
    color: rgb(50, 101, 134);
              transition-delay: 150ms;
